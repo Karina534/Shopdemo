@@ -1,8 +1,6 @@
 package org.example.shopdemo.dao;
 
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.example.shopdemo.entity.Books;
 import org.example.shopdemo.entity.BooksImages;
 import org.example.shopdemo.exception.DaoException;
 import org.example.shopdemo.utils.BDConnectionService;

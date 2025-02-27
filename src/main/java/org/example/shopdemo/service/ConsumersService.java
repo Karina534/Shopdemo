@@ -1,12 +1,10 @@
 package org.example.shopdemo.service;
 
-import lombok.extern.slf4j.Slf4j;
 import org.example.shopdemo.dao.ConsumersDao;
 import org.example.shopdemo.dto.ConsumerDto;
 import org.example.shopdemo.entity.Consumers;
 import org.example.shopdemo.exception.EntityNotFoundException;
 import org.example.shopdemo.exception.ValidationException;
-import org.example.shopdemo.validator.Error;
 import org.example.shopdemo.validator.FindingConsumerValidation;
 import org.example.shopdemo.validator.LoginValidatorForConsumers;
 import org.example.shopdemo.validator.RegistrationValidatorForConsumers;

@@ -1,7 +1,7 @@
 /* Reset and base styles  */
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     border: none;
 }
 
@@ -167,7 +167,7 @@ h3 {
 
 p {
     font-size: 20px;
-    padding: 3px 0px;
+    padding: 3px 0;
 }
 
 .context {

@@ -1,8 +1,5 @@
 package org.example.shopdemo.dao;
 
-import org.example.shopdemo.dto.BooksFilter;
-import org.example.shopdemo.entity.Books;
-
 import java.util.List;
 import java.util.Optional;
 

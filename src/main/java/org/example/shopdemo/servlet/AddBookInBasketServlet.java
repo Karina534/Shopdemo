@@ -1,24 +1,18 @@
 package org.example.shopdemo.servlet;
 
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.example.shopdemo.dto.BooksDto;
 import org.example.shopdemo.exception.DaoException;
 import org.example.shopdemo.exception.EntityNotFoundException;
 import org.example.shopdemo.service.BasketBooksService;
-import org.example.shopdemo.service.BooksService;
 import org.example.shopdemo.service.CookieService;
 import org.example.shopdemo.service.LogService;
 import org.example.shopdemo.utils.UrlPath;
 import org.slf4j.MDC;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Optional;
 import java.util.UUID;
 
 @WebServlet(UrlPath.ADD_BOOK_IN_BASKET)
