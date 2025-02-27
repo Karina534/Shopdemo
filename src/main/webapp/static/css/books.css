@@ -1,0 +1,174 @@
+/* Reset and base styles  */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul, ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    display: block;
+}
+
+/*------------------------------------------------*/
+
+img {
+    width: auto;
+    height: 15%;
+}
+
+.line {
+    display: flex;
+    flex-wrap: wrap; /* Разрешает перенос строк, если не хватает места */
+    gap: 16px; /* Расстояние между элементами */
+    justify-content: space-around; /* Равномерное распределение элементов */
+}
+
+/* Каждый элемент книги */
+.line div {
+    display: flex;
+    flex-direction: column; /* Располагает содержимое по вертикали */
+    align-items: center; /* Центрирует элементы горизонтально */
+    text-align: center; /* Центрирует текст */
+    width: 200px; /* Устанавливает фиксированную ширину */
+    border: 1px solid #ccc; /* Добавляет границу вокруг элемента */
+    border-radius: 8px; /* Скругляет углы */
+    padding: 10px; /* Внутренние отступы */
+    background-color: #f9f9f9; /* Светлый фон */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для элементов */
+    transition: transform 0.3s ease; /* Эффект при наведении */
+}
+
+/* Изображение книги */
+.line img {
+    max-width: 100%; /* Ограничивает ширину изображения */
+    height: auto; /* Сохраняет пропорции */
+    border-radius: 4px; /* Скругленные углы */
+}
+
+/* Текст под изображением */
+.line div span {
+    margin-top: 8px; /* Отступ сверху */
+    font-size: 18px; /* Размер текста */
+    color: #333; /* Цвет текста */
+    word-wrap: break-word; /* Перенос слов, если они слишком длинные */
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin: 5px 5px;
+    padding-bottom: 5px;
+}
+
+/* Контейнер для иконки */
+.icon-container {
+    margin-top: auto; /* Сдвигает иконку к низу блока */
+    display: flex;
+    justify-content: center; /* Центрирует иконку */
+    align-items: center;
+    padding-top: 8px;
+}
+
+/* Стили для иконки */
+.icon-container i {
+    font-size: 18px; /* Размер иконки */
+    color: saddlebrown; /* Цвет иконки */
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; /* Изменяем курсор на указатель */
+}
+
+/* Эффект при наведении */
+.icon-container i:hover {
+    color: darkorange; /* Меняем цвет при наведении */
+    transform: scale(1.2); /* Увеличиваем иконку при наведении */
+}
+
+a {
+    font-size: 26px;
+    color: saddlebrown;
+    text-decoration: none;
+    margin: 5%;
+}
+
+a:hover {
+    color: #af5b33;
+}

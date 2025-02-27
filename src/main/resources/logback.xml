@@ -1,0 +1,104 @@
+<configuration debug="true">
+    <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener"/>
+    <appender name="FileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR:-/app/logs}/servlets.log</file>
+<!--        Файл не перезаписывается, а логи дописываются в конец-->
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/servlets.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>30MB</maxFileSize>
+<!--            Срок хранения файлов, дней-->
+            <maxHistory>1</maxHistory>
+<!--            Начальный и конечный индекс файла, при достижении максимума, старый файл удаляется-->
+            <minIndex>1</minIndex>
+            <maxIndex>3</maxIndex>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FileAppender2" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR:-/app/logs}/other.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+<!--            Можно указать формат zip, чтобы сжать-->
+            <fileNamePattern>logs/other.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>1</maxHistory>
+            <minIndex>1</minIndex>
+            <maxIndex>3</maxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>30MB</maxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FileAppender3" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR:-/app/logs}/service.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <!--            Можно указать формат zip, чтобы сжать-->
+            <fileNamePattern>logs/other.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>1</maxHistory>
+            <minIndex>1</minIndex>
+            <maxIndex>3</maxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>30MB</maxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FileAppender4" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR:-/app/logs}/dao.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <!--            Можно указать формат zip, чтобы сжать-->
+            <fileNamePattern>logs/other.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>1</maxHistory>
+            <minIndex>1</minIndex>
+            <maxIndex>3</maxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>30MB</maxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+<!--    additivity Указывает, что логи из этого логгера не передаются родительскому логгеру, чтобы избежать дублирования записей.-->
+    <logger name="org.example.shopdemo.servlet" level="INFO" additivity="false">
+        <appender-ref ref="FileAppender"/>
+    </logger>
+    <logger name="org.example.shopdemo.validator" level="INFO" additivity="false">
+        <appender-ref ref="FileAppender"/>
+    </logger>
+    <logger name="org.example.shopdemo.filter" level="INFO" additivity="false">
+        <appender-ref ref="FileAppender"/>
+    </logger>
+
+    <logger name="org.example.shopdemo.service" level="INFO" additivity="false">
+        <appender-ref ref="FileAppender3"/>
+    </logger>
+
+    <logger name="org.example.shopdemo.dao" level="INFO" additivity="false">
+        <appender-ref ref="FileAppender4"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FileAppender2" />
+    </root>
+</configuration>

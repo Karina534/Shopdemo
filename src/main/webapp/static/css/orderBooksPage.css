@@ -1,0 +1,55 @@
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin: 5px 5px;
+    padding-bottom: 5px;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 5px 5px;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 26px;
+    margin: 5px 5px;
+}
+
+a {
+    font-size: 26px;
+    color: saddlebrown;
+    text-decoration: none;
+}
+
+/*.bookText:hover {*/
+/*    color: #af5b33;*/
+/*}*/
+
+a .bookInfo {
+    font-size: 22px;
+    color: black;
+}
+
+.orderInfo {
+    margin: 3% 2%;
+}
+
+.orderT {
+    text-decoration: underline;
+}
+
+.bookText {
+    display: inline-block;
+    margin: 15px;
+    padding: 15px; /* Добавляем отступы для текста внутри */
+    border: 2px solid #af5b33; /* Цвет рамки */
+    border-radius: 10px; /* Закругление углов */
+    background-color: #f8f8f8; /* Светлый фон */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Плавные анимации */
+}
+
+.bookText:hover {
+    background-color: #fcead5; /* Цвет при наведении */
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2); /* Усиленная тень при наведении */
+}

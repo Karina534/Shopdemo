@@ -1,0 +1,54 @@
+services:
+  shopdemoback:
+    container_name: shopdemoback
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_URL=${DB_URL}
+      - LOG_DIR=${LOG_DIR}
+    depends_on:
+      shopdemopostgres:
+        condition: service_healthy
+    volumes:
+      - static-volume:/static
+      - uploads-volume:/usr/local/tomcat/webapps/ROOT/uploads
+    restart: always
+
+  shopdemopostgres:
+    image: postgres:13.3-alpine
+    container_name: shopdemopostgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=SmiSup704
+      - POSTGRES_DB=Shopdemo
+    volumes:
+      - ./init-scripts:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "postgres", "-d", "Shopdemo" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ports:
+      - "5432:5432"
+    restart: always
+
+  nginx:
+    image: nginx:1.25.3-alpine-slim
+    container_name: shopdemo-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - uploads-volume:/usr/local/tomcat/webapps/ROOT/uploads:ro
+      - static-volume:/usr/share/nginx/html/static:ro
+    depends_on:
+      - shopdemoback
+
+volumes:
+  static-volume:
+  uploads-volume:

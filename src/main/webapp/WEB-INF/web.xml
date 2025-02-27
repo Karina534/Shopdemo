@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <filter>
+        <filter-name>SessionRestoreByCookieFilter</filter-name>
+        <filter-class>org.example.shopdemo.filter.SessionRestoreByCookieFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SessionRestoreByCookieFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>AuthorisationFilter</filter-name>
+        <filter-class>org.example.shopdemo.filter.AuthorisationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthorisationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>AdministratorRightsFilter</filter-name>
+        <filter-class>org.example.shopdemo.filter.AdministratorRightsFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AdministratorRightsFilter</filter-name>
+        <url-pattern>/makeBook</url-pattern>
+        <url-pattern>/bookReduction</url-pattern>
+        <url-pattern>/deleteBook</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>CharsetFilter</filter-name>
+        <filter-class>org.example.shopdemo.filter.CharsetFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharsetFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+</web-app>

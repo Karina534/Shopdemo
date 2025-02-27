@@ -1,0 +1,24 @@
+
+.header {
+    width: 100%;
+    padding: 15px 0;
+    text-align: right;
+    background-color: bisque;
+}
+
+.headerText {
+    font-size: 24px;
+    margin: 15px 15px;
+    color: saddlebrown;
+    text-decoration: none;
+}
+
+.headerText:hover {
+    color: #af5b33;
+}
+
+.header form {
+    display: inline-block; /* Делаем форму строчной */
+    margin: 0; /* Убираем стандартные отступы */
+    padding: 0;
+}

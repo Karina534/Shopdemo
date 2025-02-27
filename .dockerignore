@@ -1,0 +1,13 @@
+/logs
+
+.git/
+.gitignore
+
+.idea/
+.docx
+
+target/
+
+mvnw
+mvnw.cmd
+.mvn/
