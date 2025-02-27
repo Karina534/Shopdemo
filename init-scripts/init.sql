@@ -105,7 +105,7 @@ VALUES (123);
 
 INSERT INTO admins (admin_name, surname, email, password, telephone, role, individual_num_id)
 VALUES ('TestAdmin', 'TestAdmin', 'testadmin@mail.ru', '10293847', '+79159159595', 'A', 1);
--- ('TestUser, email = 'testUser@mail.ru', password = '10293847')
+
 INSERT INTO currencies
 VALUES (1, 'P'),
        (2, '$');
