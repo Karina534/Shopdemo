@@ -2,7 +2,6 @@ package org.example.shopdemo.dao;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.shopdemo.entity.Admins;
-import org.example.shopdemo.entity.Consumers;
 import org.example.shopdemo.exception.DaoException;
 import org.example.shopdemo.utils.BDConnectionService;
 

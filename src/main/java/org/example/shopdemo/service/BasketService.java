@@ -6,7 +6,6 @@ import org.example.shopdemo.dao.BasketsDao;
 import org.example.shopdemo.dto.ConsumerDto;
 import org.example.shopdemo.entity.Baskets;
 import org.example.shopdemo.entity.Consumers;
-import org.example.shopdemo.exception.DaoException;
 import org.example.shopdemo.exception.EntityNotFoundException;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)

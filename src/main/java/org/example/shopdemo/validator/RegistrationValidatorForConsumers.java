@@ -2,7 +2,6 @@ package org.example.shopdemo.validator;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-import lombok.extern.java.Log;
 import org.example.shopdemo.dto.ConsumerDto;
 import org.example.shopdemo.service.LogService;
 import org.example.shopdemo.utils.ValidationErrors;

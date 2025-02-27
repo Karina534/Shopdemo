@@ -9,7 +9,6 @@ import org.example.shopdemo.dto.BooksImagesDto;
 import org.example.shopdemo.entity.Books;
 import org.example.shopdemo.entity.BooksImages;
 import org.example.shopdemo.entity.Currencies;
-import org.example.shopdemo.exception.DaoException;
 
 import java.util.List;
 import java.util.Optional;

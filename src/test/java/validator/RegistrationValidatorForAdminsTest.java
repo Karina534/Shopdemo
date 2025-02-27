@@ -2,7 +2,6 @@ package validator;
 
 import org.example.shopdemo.dao.AdminsIndNumsDao;
 import org.example.shopdemo.dto.AdminsDto;
-import org.example.shopdemo.dto.ConsumerDto;
 import org.example.shopdemo.entity.AdminsIndNums;
 import org.example.shopdemo.utils.ValidationErrors;
 import org.example.shopdemo.validator.Error;

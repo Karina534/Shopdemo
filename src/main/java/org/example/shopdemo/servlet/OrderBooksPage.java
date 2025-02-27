@@ -6,15 +6,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
-import org.example.shopdemo.entity.Orders;
-import org.example.shopdemo.service.OrderService;
 import org.example.shopdemo.service.OrdersBooksService;
 import org.example.shopdemo.utils.JSPHelper;
 import org.example.shopdemo.utils.UrlPath;
 import org.example.shopdemo.entity.OrdersBooks;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j

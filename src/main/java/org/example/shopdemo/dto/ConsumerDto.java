@@ -2,7 +2,6 @@ package org.example.shopdemo.dto;
 
 import lombok.Builder;
 import lombok.Data;
-import lombok.Value;
 
 @Data
 @Builder

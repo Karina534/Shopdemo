@@ -1,12 +1,9 @@
 package org.example.shopdemo.service;
 
 import org.example.shopdemo.dao.BooksDao;
-import org.example.shopdemo.dao.PublishersDao;
 import org.example.shopdemo.dto.BooksDto;
 import org.example.shopdemo.entity.Books;
-import org.example.shopdemo.entity.Currencies;
 
-import java.awt.print.Book;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -34,13 +31,13 @@ public class BooksService {
         return list.stream().filter(booksDto -> booksDto.getRemains() > 0).collect(Collectors.toList());
     }
 
-    public Optional<BooksDto> findBookById(Long id){
-        Optional<Books> book = booksDao.findById(id);
-        return book.map(books -> BooksDto.builder().booksId(books.getBookId()).author(books.getAuthor())
-                .title(books.getTitle()).description(books.getDescription()).price(books.getPrice())
-                .currencyId(books.getCurrency().getId()).remains(books.getRemains())
-                .publisherId(books.getPublisher().getPublisherId()).build());
-    }
+//    public Optional<BooksDto> findBookById(Long id){
+//        Optional<Books> book = booksDao.findById(id);
+//        return book.map(books -> BooksDto.builder().booksId(books.getBookId()).author(books.getAuthor())
+//                .title(books.getTitle()).description(books.getDescription()).price(books.getPrice())
+//                .currencyId(books.getCurrency().getId()).remains(books.getRemains())
+//                .publisherId(books.getPublisher().getPublisherId()).build());
+//    }
 
     public void decreaseRemains(Books book){
         if (book.getRemains() > 0) {

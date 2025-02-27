@@ -3,15 +3,11 @@ package org.example.shopdemo.service;
 import jakarta.servlet.http.Cookie;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.example.shopdemo.dto.AdminsDto;
 import org.example.shopdemo.dto.ConsumerDto;
-import org.example.shopdemo.entity.Consumers;
 import org.example.shopdemo.exception.CookieCreationException;
-import org.slf4j.MDC;
 
 import java.util.Arrays;
-import java.util.Optional;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class CookieService {

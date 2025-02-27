@@ -8,16 +8,12 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.example.shopdemo.dto.BooksDto;
 import org.example.shopdemo.dto.BooksWithImgDto;
-import org.example.shopdemo.entity.Books;
 import org.example.shopdemo.service.BooksImagesService;
 import org.example.shopdemo.service.BooksService;
-import org.example.shopdemo.service.LogService;
 import org.example.shopdemo.utils.JSPHelper;
 import org.example.shopdemo.utils.UrlPath;
-import org.slf4j.MDC;
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 @Slf4j

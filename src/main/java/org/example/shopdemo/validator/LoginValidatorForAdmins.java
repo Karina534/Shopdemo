@@ -8,11 +8,12 @@ import org.example.shopdemo.dto.AdminsDto;
 import org.example.shopdemo.service.LogService;
 import org.example.shopdemo.utils.ValidationErrors;
 
+@Setter
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class LoginValidatorForAdmins implements Validator<AdminsDto>{
     private final static LoginValidatorForAdmins INSTANCE = new LoginValidatorForAdmins();
 
-    @Setter // Только для тестов!
+    // Только для тестов!
     private AdminsIndNumsDao adminsIndNumsDao = AdminsIndNumsDao.getInstance();
 
     @Override
